@@ -8,10 +8,7 @@ gith({repo: 'eolhing/website'}).on('all', function(payload)
     {
   		execFile('./hook.sh', function(error, stdout, stderr)
   		{
-        console.log('Error : ',error);
-        console.log('stdout : ',stdout);
-        console.log('stderr : ',stderr);
-  			console.log('exec complete');
+  				console.log('exec complete');
   		});
     }
 });
