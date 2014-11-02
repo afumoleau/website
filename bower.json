@@ -1,0 +1,22 @@
+{
+  "name": "eolhing-website",
+  "version": "1.0",
+  "homepage": "https://github.com/eolhing/website",
+  "authors": [
+    "eolhing <eolhing@gmail.com>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "core-icon-button": "Polymer/core-icon-button#~0.4.2",
+    "core-overlay": "Polymer/core-overlay#~0.4.2"
+  }
+}

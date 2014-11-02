@@ -1,0 +1,57 @@
+<polymer-element name="eolhing-project" on-click="{{click}}">
+	<template>
+		<style>
+		:host
+		{
+			display : block;
+			background-image : url(../images/[[img]]);
+			background-size: cover;
+			background-position: center center;
+			padding-top: 50px;
+			border-radius : 5px;
+			overflow : hidden;
+			border : 1px solid white;
+			box-shadow : 0px 0px 5px rgba(0,0,0,0.25);
+			margin : 10px;
+			cursor: pointer;
+		}
+		#info
+		{
+			padding : 10px 25px;
+			color : white;
+			background-color : rgba(0,0,0,0.5);
+		}
+		h3
+		{
+			margin : 0px;
+			text-shadow : 0px 1px 5px #000;
+			font-size : 1.5em;
+		}
+		
+		core-overlay
+		{
+			background-color : white;
+			padding: 50px;
+		}
+		</style>
+		<div id="info">
+			<h3>{{name}}</h3>
+		</div>
+		<core-overlay backdrop id="overlay">
+		  <content></content>
+		</core-overlay>
+	</template>
+	<script>
+		Polymer({
+			publish: 
+			{
+				name : '',
+				img : '',
+			},
+			click : function(e)
+			{
+				this.$.overlay.opened = true;
+			}
+		});
+	</script>
+</polymer-element>

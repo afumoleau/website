@@ -1,2 +1,52 @@
-Hi !
-Updated via Github hook
+<!doctype html>
+<html>
+    <head>
+        <title>Alix Fumoleau - Video game dev.</title>
+        <script src="bower_components/platform/platform.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <link href='http://fonts.googleapis.com/css?family=Questrial|Open+Sans' rel='stylesheet' type='text/css'>
+        <link rel="import" href="bower_components/core-icon-button/core-icon-button.html">
+        <link rel="import" href="bower_components/core-icons/core-icons.html" />
+        <link rel="import" href="bower_components/core-icon/core-icon.html" />
+        <link rel="import" href="bower_components/core-icons/social-icons.html" />
+        <link rel="import" href="bower_components/core-transition/core-transition.html" />
+        <link rel="import" href="bower_components/core-overlay/core-overlay.html" />
+        <link rel="import" href="components/eolhing-project.html" />
+    </head>
+    <body>
+        <header layout horizontal>
+           	<img src="picture.png" alt="">
+           	<div class="info" layout vertical>
+				<h1>Alix Fumoleau</h1>
+				<p>
+          			Hi ! I'm a student in Computer Science at Université de Bordeaux.
+          			I love programming and I make video games as a hobby.
+          		</p>
+          		<div>
+            		Follow me on
+            		<a target="_blank" href="https://github.com/eolhing"><core-icon-button icon="social:post-github">GitHub</core-icon-button></a>
+            		<a target="_blank" href="https://www.facebook.com/Alix.Fumoleau"><core-icon-button icon="social:post-facebook">Facebook</core-icon-button></a>
+            		<a target="_blank" href="https://twitter.com/eolhing"><core-icon-button icon="social:post-twitter">Twitter</core-icon-button></a>
+            		<a target="_blank" href="https://www.linkedin.com/pub/alix-fumoleau/32/981/aa1"><core-icon-button icon="social:post-linkedin">LinkedIn</core-icon-button></a>
+          		</div>
+           	</div>
+        </header>
+        <div id="main">
+        	<h2>Projects</h2>
+        	<div id="projects">
+				<eolhing-project name="Tale of a Lost Soul" img="taleofalostsoul.png">
+					Tale of a Lost Soul
+				</eolhing-project>
+				<eolhing-project name="RythmPropaGanda" img="rythmpropaganda.png">
+					RythmPropaGanda
+				</eolhing-project>
+				<eolhing-project name="Rool" img="rool.png">
+					Rool
+				</eolhing-project>
+				<eolhing-project name="Shards" img="shards.png">
+					Shards
+				</eolhing-project>
+        	</div>
+        </div>
+    </body>
+</html>
