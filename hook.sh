@@ -1,3 +1,3 @@
 git pull >> hook.log
 npm update
-bower update
+bower update --allow-root
