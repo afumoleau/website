@@ -53,12 +53,9 @@ html /deep/ core-icon {
 h2 {
   font-size: 2em;
 }
-#projects {
+#projects,
+#web,
+#tools {
   display: flex;
   flex-wrap: wrap;
-}
-#projects * {
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 350px;
 }

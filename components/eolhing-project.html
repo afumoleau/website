@@ -4,19 +4,21 @@
 		:host
 		{
 			display : block;
-			background-image : url(../images/[[img]]);
-			background-size: cover;
-			background-position: center center;
-			padding-top: 50px;
+			background-color : #FFF;
 			border-radius : 5px;
 			overflow : hidden;
 			border : 1px solid white;
 			box-shadow : 0px 0px 5px rgba(0,0,0,0.25);
 			margin : 10px;
 			cursor: pointer;
+			
+			flex-grow : 1;
+			flex-shrink : 0;
+			flex-basis : 350px;
 		}
 		#info
 		{
+			margin-top : 40px;
 			padding : 10px 25px;
 			color : white;
 			background-color : rgba(0,0,0,0.5);
@@ -24,22 +26,125 @@
 		h3
 		{
 			margin : 0px;
-			text-shadow : 0px 1px 5px #000;
+			text-shadow : 0px 1px 3px #000;
 			font-size : 1.5em;
 		}
+		#description
+		{
+			font-size : 0.9em;
+			opacity : 0.8;
+			text-shadow : 0px 1px 0px #000;
+		}
+		#tags
+		{
+			text-align: right;
+			color : white;
+		}
+		
+		:host([small])
+		{
+			flex-basis : 200px;
+		}
+		:host([small]) #info
+		{
+			padding : 5px 25px;
+		}
+		:host([small]) h3
+		{
+			margin : 0px;
+			text-shadow : 0px 1px 5px #000;
+			font-size : 1.1em;
+		}
+		:host([small]) #description
+		{
+			display : none;
+		}
+		::content tag
+		{
+			background-color : #CCC;
+			color : black;
+			font-size : 0.66em;
+			padding : 2px 5px;
+			margin : 0px 5px;
+			border-radius : 3px;
+		}
+		::content tag.Haxe { background-color : orange;}
+		::content tag.OpenFL { background-color : teal;}
+		::content tag.Javascript { background-color : #60B000;}
+		::content tag.Unity3D { background-color : #455463;}
+		::content tag.CPP { background-color : #0080FF;}
+		::content tag.CSharp { background-color : #FF4020;}
+		::content tag.Haxor { background-color : #AAA;}
+		::content tag.Heaps { background-color : white;}
 		
 		core-overlay
 		{
 			background-color : white;
-			padding: 50px;
+			padding: 20px;
+			cursor :auto;
 		}
+		#title
+		{
+			font-size : 2em;
+		}
+		::content pictures
+		{
+			margin-right : 20px;
+			display : flex;
+			flex-direction: column;
+		}
+		::content pictures img
+		{
+			max-width : 200px;
+			max-height : 120px;
+			margin : 10px 0px;
+			box-shadow : 0px 2px 7px rgba(0,0,0,0.5);
+		}
+		::content description
+		{
+			flex-grow : 1;
+			max-width : 600px;
+			margin : 10px;
+			text-align: justify;
+		}
+		::content links a
+		{
+			display : block;
+			text-decoration : none;
+			font-size : 1.33em;
+			padding : 15px 10px;
+			background-color : #888;
+			color : #FFF;
+			margin : 10px 0px;
+			border-radius : 5px;
+		}
+		#close-overlay
+		{
+			position : absolute;
+			top : 10px;
+			right : 5px;
+			cursor : pointer;
+		}
+		
 		</style>
-		<div id="info">
-			<h3>{{name}}</h3>
+		<div style="background-image : url(../images/{{img}}); background-size: cover; background-position: center center;">
+			<div id="tags"><content select="tag"></content></div>
+			<div id="info">
+				<h3>{{name}}</h3>
+				<div id="description">{{description}}</div>
+			</div>
+			<core-overlay backdrop id="overlay" closeSelector="#close-overlay">
+			  <core-icon icon="close" id="close-overlay"></core-icon>
+			  <div layout horizontal>
+			  	<content select="pictures"></content>
+			  	<div layout vertical>
+					<div id="title">{{name}}</div>
+			  		<content select="description"></content>
+			  		<content select="links"></content>
+			  	</div>
+			  </div>
+			</core-overlay>
 		</div>
-		<core-overlay backdrop id="overlay">
-		  <content></content>
-		</core-overlay>
 	</template>
 	<script>
 		Polymer({
@@ -47,6 +152,7 @@
 			{
 				name : '',
 				img : '',
+				description : '',
 			},
 			click : function(e)
 			{

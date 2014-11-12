@@ -7,13 +7,13 @@
         <link href='http://fonts.googleapis.com/css?family=Questrial|Open+Sans' rel='stylesheet' type='text/css'>
         <link rel="import" href="bower_components/core-icon-button/core-icon-button.html">
         <link rel="import" href="bower_components/core-icons/core-icons.html" />
-        <link rel="import" href="bower_components/core-icon/core-icon.html" />
         <link rel="import" href="bower_components/core-icons/social-icons.html" />
+        <link rel="import" href="bower_components/core-icon/core-icon.html" />
         <link rel="import" href="bower_components/core-transition/core-transition.html" />
         <link rel="import" href="bower_components/core-overlay/core-overlay.html" />
         <link rel="import" href="components/eolhing-project.html" />
     </head>
-    <body>
+    <body unresolved>
         <header layout horizontal>
            	<img src="picture.png" alt="">
            	<div class="info" layout vertical>
@@ -31,19 +31,337 @@
            	</div>
         </header>
         <div id="main">
-        	<h2>Projects</h2>
+        	<h2>Projects - Video Games</h2>
         	<div id="projects">
-				<eolhing-project name="Tale of a Lost Soul" img="taleofalostsoul.png">
-					Tale of a Lost Soul
+				<eolhing-project name="Absolute Zero" description="Game Jam Bordeaux #2, Theme : Shiver" img="absolutezero/1.png">
+					<tag class="Unity3D">Unity3D</tag>
+					<tag class="Javascript">Javascript</tag>
+					<pictures>
+						<img src="images/absolutezero/1.png" alt="" />
+						<img src="images/absolutezero/2.png" alt="" />
+						<img src="images/absolutezero/3.png" alt="" />
+						<img src="images/absolutezero/4.png" alt="" />	
+					</pictures>
+					<description>
+						This game was developped for the Game Jam Bordeaux #2 (November 2014). The theme was "Shiver". It was awarded the "Best game made by a team" award !<br />
+						In this game, you play as John Fahrenheit, a courageous adventurer lost in space. His spaceship got hit by asteroids and a breach opened : with every move the heat in the ship lower. John must return to its home planet before it's too late, help him !<br />
+						<br />
+						Please play the game and give me your feedback ! ;)<br />
+						<br />
+						Dev. info : On this project, we used Unity 3D to have a good team workflow without hassle.<br />
+					</description>
+					<links>
+						<a target="_blank" href="https://github.com/eolhing/AbsoluteZero"><core-icon icon="social:post-github"></core-icon>Source on Github</a>
+						<a target="_blank" href="https://www.facebook.com/l.php?u=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F0By2YCm_3D0JKVWdVVVVwMWhpN00%2Fview%3Fusp%3Dsharing&h=PAQHTmahd"><core-icon icon="file-download"></core-icon>Download this Game</a>
+					</links>
 				</eolhing-project>
-				<eolhing-project name="RythmPropaGanda" img="rythmpropaganda.png">
-					RythmPropaGanda
+				<eolhing-project name="Tale of a Lost Soul" description="Ludum Dare #27, Theme : 10 Secondes" img="taleofalostsoul.png">
+					<tag class="Haxe">Haxe</tag>
+					<tag class="OpenFL">OpenFL</tag>
+					<pictures>
+						<img src="images/taleofalostsoul/1.jpg" alt="" />
+						<img src="images/taleofalostsoul/2.jpg" alt="" />
+						<img src="images/taleofalostsoul/3.jpg" alt="" />
+						<img src="images/taleofalostsoul/4.jpg" alt="" />	
+					</pictures>
+					<description>
+						This game was developped for the Ludum Dare #27 (August 2013). The theme was "10 seconds".<br />
+						In this game, you go through several levels that you must complete within 10s. You'll have to collect items and dodge enemies as fast as you can and you'll also face a difficult choice in the storyline.<br />
+						<br />
+						Please play the game and give me your feedback ! ;)<br />
+						<br />
+						Dev. info : On this project, I used Haxe and OpenFL which are a great to make games quickly.<br />
+					</description>
+					<links>
+						<a target="_blank" href="https://github.com/eolhing/taleofalostsoul"><core-icon icon="social:post-github"></core-icon>Source on Github</a>
+						<a target="_blank" href="http://gamejolt.com/games/adventure/tale-of-a-lost-soul/17225/"><core-icon icon="file-download"></core-icon>Download this Game</a>
+					</links>
 				</eolhing-project>
-				<eolhing-project name="Rool" img="rool.png">
-					Rool
+				
+				<eolhing-project name="RhythmPropaGanda" description="Game Jam Bordeaux, Theme : Rhythm" img="rhythmpropaganda.png">
+					<tag class="Haxe">Haxe</tag>
+					<tag class="OpenFL">OpenFL</tag>
+					<pictures>
+						<img src="images/rhythmpropaganda/1.png" alt="" />
+						<img src="images/rhythmpropaganda/2.png" alt="" />
+						<img src="images/rhythmpropaganda/3.png" alt="" />
+						<img src="images/rhythmpropaganda/4.png" alt="" />	
+					</pictures>
+					<description>
+						This game was developped for the first Game Jam Bordeaux (June 2014), the theme was "Rhythm".<br />
+						In this game, you fight against different kind of enemies, attacking and defending on a precise timing to win the battle. Sometimes you'll win some item which will help you on your quest !<br />
+						<br />
+						Please play the game and give me your feedback ! ;)<br />
+						<br />
+						Dev. info : At the beginning of the game jam, I wanted it to be a mobile game but it had to be playable on PC as well, that why I used Haxe and OpenFL.<br />
+					</description>
+					<links>
+						<a target="_blank" href="https://github.com/eolhing/rhythmpropaganda"><core-icon icon="social:post-github"></core-icon>Source on Github</a>
+						<a target="_blank" href="http://gamejambordeaux.flat226.fr/files/RythmPropaGanda"><core-icon icon="file-download"></core-icon>Download this Game</a>
+					</links>
 				</eolhing-project>
-				<eolhing-project name="Shards" img="shards.png">
-					Shards
+				
+				<eolhing-project name="Rool" description="Created with the Flat226 team" img="rool.png">
+					<tag class="Unity3D">Unity3D</tag>
+					<tag class="CSharp">C#</tag>
+					<pictures>
+						<img src="images/rool/1.png" alt="" />
+						<img src="images/rool/2.png" alt="" />
+						<img src="images/rool/3.png" alt="" />
+						<img src="images/rool/4.png" alt="" />	
+					</pictures>
+					<description>
+						I worked on this game as part of the Flat226 team.<br />
+						The goal of the game it to make a ball go through an level by interacting with other objects : doors, wind mill, pistons. We presented the game at the Animasia festival and it has received a very good approval, especially by kids.
+						<br />
+						Please play the game and give me your feedback ! ;)<br />
+						<br />
+						Dev. info : We were 3~4 working on the game. We used Unity3D, the editor was really cool to build levels !<br />
+					</description>
+					<links>
+						<a target="_blank" href="http://google.fr"><core-icon icon="file-download"></core-icon>Download this Game</a>
+					</links>
+				</eolhing-project>
+				
+				<eolhing-project name="Shards" description="Ludum Dare #30, Theme : Connected Worlds" img="shards.png">
+					<tag class="Haxe">Haxe</tag>
+					<tag class="Heaps">Heaps.io</tag>
+					<pictures>
+						<img src="images/shards/1.png" alt="" />
+						<img src="images/shards/2.png" alt="" />
+						<img src="images/shards/3.png" alt="" />
+						<img src="images/shards/4.png" alt="" />	
+					</pictures>
+					<description>
+						This game was developped for the Ludum Dare #30 (August 2014). The theme was "Connected worlds".<br />
+						It features two character bound by the same controls. They evolve in two different environments and must collect "shards" during their quests, but many dangers await.<br />
+						<br />
+						Please play the game and give me your feedback ! ;)<br />
+						<br />
+						Dev. info : On this project, I used Haxe and Heaps.io to easily build a cross-platform 3D environment.<br />
+					</description>
+					<links>
+						<a target="_blank" href="https://github.com/eolhing/shards"><core-icon icon="social:post-github"></core-icon>Source on Github</a>
+						<a target="_blank" href="http://eolhing.me/shards"><core-icon icon="file-download"></core-icon>Download this Game</a>
+					</links>
+				</eolhing-project>
+				
+				<eolhing-project name="I Hate Circles" description="Created with the Flat226 team" img="ihatecircles.png">
+					I Hate Circles
+					<tag class="Haxe">Haxe</tag>
+					<tag class="Haxor">Haxor</tag>
+					<pictures>
+						<img src="images/ihatecircles/1.png" alt="" />
+						<img src="images/ihatecircles/2.png" alt="" />
+						<img src="images/ihatecircles/3.png" alt="" />
+						<img src="images/ihatecircles/4.png" alt="" />	
+					</pictures>
+					<description>
+						I worked on this project as part of the Flat226 Team in August 2014.<br />
+						The idea was to make a collaborative web-browser game with realtime movements. It can be played by up to three players and each have to shoot circles of its own color. Protecting your teammates of the circles they can't shoot is the key to win the game !<br />
+						<br />
+						Please play the game and give me your feedback ! ;)<br />
+						<br />
+						Dev. info : On this project, I used Haxe and Haxor Engine to make a plugin-free web browser game with realtime networking.<br />
+					</description>
+					<links>
+						<a target="_blank" href="http://google.fr"><core-icon icon="file-download"></core-icon>Download this Game</a>
+					</links>
+				</eolhing-project>
+				
+				<eolhing-project name="Imblockible" description="A game where you have to jump over obstacles" img="imblockible.png">
+					Imblockible
+					<tag class="CPP">C++</tag>
+					<tag class="SFML">SFML</tag>
+					<pictures>
+						<img src="images/imblockible/1.png" alt="" />
+						<img src="images/imblockible/2.png" alt="" />
+						<img src="images/imblockible/3.png" alt="" />
+						<img src="images/imblockible/4.png" alt="" />
+					</pictures>
+					<description>
+						This game is a clone of <a target="_blank" href="http://flukedude.com/theimpossiblegame/" target="_blank">"The Impossible Game"</a> featuring editable levels through simple text files. You control a little cube and must jump over obstacles to finish the level.<br />
+						<br />
+						Please play the game and give me your feedback ! ;)<br />
+						<br />
+						Dev. Info : On this project I used C++ and SFML, Which is a really simple and efficient Graphics/Input Library
+					</description>
+					<links>
+						<a target="_blank" href="https://github.com/eolhing/imblockible"><core-icon icon="social:post-github"></core-icon>Source on Github</a>
+					</links>
+				</eolhing-project>
+				
+				<eolhing-project name="DroidShooter" description="A shoot'em'up for Android" img="droidshooter.png">
+					<tag class="Java">Java</tag>
+					<tag class="LibGDX">LibGDX</tag>
+					<pictures>
+						<img src="images/droidshooter/1.png" alt="" />
+						<img src="images/droidshooter/2.png" alt="" />
+						<img src="images/droidshooter/3.png" alt="" />
+						<img src="images/droidshooter/4.png" alt="" />
+					</pictures>
+					<description>
+						This is a shoot'em'up targeting the Android platform. It features different kind of enemies and 4 playable spaceships, each with its own weapon.<br />
+						<br />
+						Please play the game and give me your feedback ! ;)<br />
+						<br />
+						Dev. Info : On this project I used C++ and SFML, Which is a really simple and efficient Graphics/Input Library
+					</description>
+					<links>
+						<a target="_blank" href="https://github.com/eolhing/droidshooter"><core-icon icon="social:post-github"></core-icon>Source on Github</a>
+					</links>
+				</eolhing-project>
+				
+<!--				<eolhing-project name="Tic Tac Toe" description="A TicTacToe game to play with your friends" img="tictactoe.png">
+					<tag class="CPP">C++</tag>
+					<tag class="SFML">SFML</tag>
+					Tic Tac Toe
+				</eolhing-project>-->
+        	</div>
+        	
+        	<h2>Projects - Tools and Experiments</h2>
+        	
+        	<div id="tools">
+				<eolhing-project name="VR Visualizer" description="Student project for Virtual Reality" img="vrvizualizer.png">
+					<tag class="CPP">C++</tag>
+					<tag class="OpenFramework">OpenFramework</tag>
+					<description>
+						I'm currently working on this as a student project. This is a software allowing the user to have a 3D stereoscopic view of objects on the screen using a simple cheap camera and anaglyph glasses.<br />
+						<br />
+						Links and screenshots coming soon !
+					</description>
+				</eolhing-project>
+				<eolhing-project name="RayTracer" description="Student project for Image Rendering" img="raytracer.png">
+					<tag class="CPP">C++</tag>
+					<tag class="OpenGL">OpenGL</tag>
+					<description>
+						I'm currently working on this as a student project. This is a raytracer featuring mesh rendering, global illumination, reflection and extended light sources.<br />
+						<br />
+						Links and screenshots coming soon !
+					</description>
+				</eolhing-project>
+				<eolhing-project name="Map Generator" description="Tool for generating 2D biome maps" img="mapgenerator.png">
+					<tag class="CPP">C++</tag>
+					<tag class="SFML">SFML</tag>
+					<description>
+						This project is a simple tool to create randomly generated map featuring different biomes (area with specific climatic conditions). It was part of a game project.
+					</description>
+				</eolhing-project>
+				<eolhing-project name="hxIris" description="Experiment on Virtual Reality" img="hxiris.png">
+					<tag class="Haxe">Haxe</tag>
+					<tag class="hxOpenFrameworks">hxOpenFrameworks</tag>
+					<description>
+						This project is my first experiment of webcam-based visualization &amp; interaction. It is based on color recognition and can handle two markers to retrieve position, depth and rotation. It features a calibration screen and two application examples.<br />
+						<br />
+						It was awarded the Isabelle Attali Prize in 2013 at <span style="font-style: italic;">Université de Bordeaux</span>
+					</description>
+					<links>
+						<a target="_blank" href="https://github.com/eolhing/hxIris"><core-icon icon="social:post-github"></core-icon>Source on Github</a>
+					</links>
+				</eolhing-project>
+				<eolhing-project name="Tower Rift" description="Student project with Kinect and Oculus Rift" img="towerrift.png">
+					<tag class="CSharp">C#</tag>
+					<tag class="Unity3D">Unity3D</tag>
+					<description>
+						This was my main student project for the first part of 2014. We had the idea to synchronize an Oculus Rift and a Kinect and test interactions between two users in a game scenario.<br />
+						The project features a Tower Defense game in a maze where one of the users is fully immersed and must give commands to the player. Only a good collaboration between both of the users can lead to win the game.
+					</description>
+					<links>
+						<a target="_blank" href="https://github.com/eolhing/towerRift"><core-icon icon="social:post-github"></core-icon>Source on Github</a>
+					</links>
+				</eolhing-project>
+				<eolhing-project name="Faceblur" description="Internship project on automatic face blurring" img="faceblur.png">
+					<tag class="CPP">C++</tag>
+					<tag class="OpenCV">OpenCV</tag>
+					<tag class="Qt">Qt</tag>
+					<description>
+						I worked on this as my 2013 Internship project. I had to build a software that automatically recognize and blur faces on video samples.
+					</description>
+				</eolhing-project>
+				<eolhing-project small name="Twitter Plugin for Tulip" img="tuliptwitter.png">
+					<tag class="CPP">C++</tag>
+					<tag class="Qt">Qt</tag>
+					<description>
+						I worked on this as my 2012 Internship project. I had to build a plugin for the Tulip software (graph generation and manipulation) which pull data of Twitter and generate graphs showing tweet's or user's impacts on the social network.
+					</description>
+				</eolhing-project>
+				<eolhing-project small name="aSFML" img="asfml.png">
+					<tag class="CPP">C++</tag>
+					<tag class="SFML">SFML</tag>
+					<description>
+						This is a library featuring convenient functions using SFML. I used it on most of my SFML projects.
+					</description>
+					<links>
+						<a target="_blank" href="https://github.com/eolhing/aSFML"><core-icon icon="social:post-github"></core-icon>Source on Github</a>
+					</links>
+				</eolhing-project>
+				<eolhing-project small name="automatHaxe" img="automathaxe.png">
+					<tag class="Haxe">Haxe</tag>
+					<description>
+						This is one of my 2013 student project. It's a library featuring the creation and manipulation of Finite State Machines which can be used for language detection.
+					</description>
+					<links>
+						<a target="_blank" href="https://github.com/eolhing/automathaxe"><core-icon icon="social:post-github"></core-icon>Source on Github</a>
+					</links>
+				</eolhing-project>
+				<eolhing-project small name="Croustibash" img="croustibash.png">
+					<tag class="CPP">C++</tag>
+					<tag class="SFML">SFML</tag>
+					<description>
+						This is one of my 2012 student project. It's a demo where a fixed number of fish evolve in warpped space showing group behaviour.
+					</description>
+				</eolhing-project>
+				<eolhing-project small name="Game of Life" img="gameoflife.png">
+					<tag class="CPP">C++</tag>
+					<tag class="SFML">SFML</tag>
+					<description>
+						This project is a simple implementation of The Game Of Life.
+					</description>
+				</eolhing-project>
+				<eolhing-project small name="Tree Generator" img="treegenerator.png">
+					<tag class="CPP">C++</tag>
+					<tag class="SFML">SFML</tag>
+					<description>
+						This project is a simple tool to generate cool trees as images.
+					</description>
+				</eolhing-project>
+        	</div>
+        	
+        	
+        	<h2>Projects - Web</h2>
+        	
+        	<div id="web">
+				<eolhing-project name="Flat226" description="Association Bordelaise de création de jeux vidéo" img="flat226.png">
+					<tag class="HTML5">HTML5</tag>
+					<tag class="CSS3">CSS3</tag>
+					<tag class="Haxe">Haxe</tag>
+					<description>
+						The website of Flat226, an association of video game creation based in Bordeaux, France.
+					</description>
+					<links>
+						<a href="http://flat226.fr" target="_blank">Visit the website</a>
+					</links>
+				</eolhing-project>
+				<eolhing-project name="Label[i]" description="Asso étudiante Informatique de l'Univ. de Bdx" img="labeli.png">
+					<tag class="HTML5">HTML5</tag>
+					<tag class="CSS3">CSS3</tag>
+					<tag class="Haxe">Haxe</tag>
+					<description>
+						The website of Label[i], the association of computer science students of Bordeaux University, which I created with some friends in 2012.
+					</description>
+					<links>
+						<a href="http://labeli.org" target="_blank">Visit the website</a>
+					</links>
+				</eolhing-project>
+				<eolhing-project name="Farore" description="Framework PHP/JS featuring native AJAX loading" img="farore.png">
+					<tag class="PHP">PHP</tag>
+					<tag class="Javascript">Javascript</tag>
+					<description>
+						This project is a framework to easily develop website with native ajax page loading.
+					</description>
+					<links>
+						<a target="_blank" href="https://github.com/eolhing/Farore"><core-icon icon="social:post-github"></core-icon>Source on Github</a>
+					</links>
 				</eolhing-project>
         	</div>
         </div>
