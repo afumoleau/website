@@ -12,6 +12,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "exit 0",
+    "deploy": "echo deployed",
     "start": "node server.js"
   },
   "repository": {
