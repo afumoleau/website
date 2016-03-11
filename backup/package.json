@@ -1,0 +1,28 @@
+{
+  "name": "eolhing-website",
+  "version": "1.0.0",
+  "description": "website =======",
+  "main": "index.html",
+  "dependencies": {
+    "connect": "^3.3.2",
+    "forever": "^0.12.0",
+    "gith": "^1.0.4",
+    "serve-static": "^1.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "exit 0",
+    "deploy": "echo deployed",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eolhing/website.git"
+  },
+  "author": "eolhing <eolhing@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eolhing/website/issues"
+  },
+  "homepage": "https://github.com/eolhing/website"
+}
