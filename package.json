@@ -1,5 +1,6 @@
 {
   "name": "eolhing-website",
+  "version":"1.0.0",
   "description": "A Vue.js project",
   "author": "Alix Fumoleau <alix.fumoleau@gmail.com>",
   "private": true,

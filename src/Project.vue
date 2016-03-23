@@ -1,7 +1,9 @@
 <template>
   <project>
     <div style="background-image : url('../images/{{project.id}}.png'); background-size: cover; background-position: center center;">
-      <div id="tags"><content select="tag"></content></div>
+      <div id="tags">
+        <div class="tag {{tag}}" v-for="tag in project.tags"><div>{{tag}}</div></div>
+      </div>
       <div id="info">
         <h3>{{project.name}}</h3>
         <div id="description">{{project.description}}</div>
@@ -39,7 +41,6 @@ project
   box-shadow : 0px 0px 5px rgba(0,0,0,0.25);
   margin : 10px;
   cursor: pointer;
-
   flex-grow : 1;
   flex-shrink : 0;
   flex-basis : 350px;
@@ -67,6 +68,9 @@ h3
 {
   text-align: right;
   color : white;
+  display : flex;
+  justify-content: flex-end;
+  padding : 5px;
 }
 
 :host([small])
@@ -87,23 +91,27 @@ h3
 {
   display : none;
 }
-::content tag
+.tag
 {
   background-color : #CCC;
   color : black;
-  font-size : 0.66em;
+  font-size : 0.8em;
   padding : 2px 5px;
   margin : 0px 5px;
-  border-radius : 3px;
+  transform:skewX(-20deg);
+  div {
+    transform:skewX(20deg);
+  }
 }
-::content tag.Haxe { background-color : orange;}
-::content tag.OpenFL { background-color : teal;}
-::content tag.Javascript { background-color : #60B000;}
-::content tag.Unity3D { background-color : #455463;}
-::content tag.CPP { background-color : #0080FF;}
-::content tag.CSharp { background-color : #FF4020;}
-::content tag.Haxor { background-color : #AAA;}
-::content tag.Heaps { background-color : white;}
+.tag
+.tag.haxe { background-color : orange;}
+.tag.openfl { background-color : teal;}
+.tag.javascript { background-color : #60B000;}
+.tag.unity3d { background-color : #455463;}
+.tag.cpp { background-color : #0080FF;}
+.tag.csharp { background-color : #FF4020;}
+.tag.haxor { background-color : #AAA;}
+.tag.heaps { background-color : white;}
 
 core-overlay
 {
