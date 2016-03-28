@@ -20,7 +20,7 @@
 
   <div id="main">
     <input id="searchFilter" type="search" v-model="searchFilter">
-    <project v-for="project in displayedProjects" :project="project"></project>
+    <project v-for="project in projects | filterBy searchFilter in'name'" :project="project"></project>
   </div>
 </template>
 
@@ -35,43 +35,68 @@ export default {
     return {
       searchFilter: '',
       projects: [
-        {id: 'hardcorefarmers', name: 'Hardcore Farmers', description: 'Global Game Jam 2016', tags: ['Unity3D']},
-        {id: 'thedryingseed', name: 'The Drying Seeds', description: 'Game Jam Bordeaux #3', tags: ['Unity3D']},
-        {id: 'quantumarcana', name: 'Quantum Arcana', description: 'A video game playable at the Musée d\'Aquitaine in Bordeaux', tags: ['Unity3D']},
-        {id: 'cerberus', name: 'Cerberus', description: 'Ludum Dare #33', tags: ['Unity3D']},
-        {id: 'tkbv', name: 'The Knight of the Buffet à Vaisselle', description: 'Global Game Jam 2015', tags: ['Unity3D']},
-        {id: 'remoteisland', name: 'Remote Island', description: 'Ludum Dare #31, "Entire Game on One Screen"', tags: ['Haxe', 'OpenFL']},
-        {id: 'absolutezero', name: 'Absolute Zero', description: 'Game Jam Bordeaux #2, Theme : Shiver', tags: ['Unity3D']},
-        {id: 'taleofalostsoul', name: 'Tale of a Lost Soul', description: 'Ludum Dare #27, Theme : 10 Secondes', tags: ['Haxe', 'OpenFL']},
-        {id: 'rhythmpropaganda', name: 'RhythmPropaGanda', description: 'Game Jam Bordeaux, Theme : Rhythm', tags: ['Haxe', 'OpenGL']},
-        {id: 'rool', name: 'Rool', description: 'Created with the Flat226 team', tags: ['Unity3D']},
-        {id: 'shards', name: 'Shards', description: 'Ludum Dare #30, Theme : Connected Worlds', tags: ['Haxe', 'Heaps']},
-        {id: 'ihatecircles', name: 'I Hate Circles', description: 'Created with the Flat226 team', tags: ['Haxe', 'Haxor']},
-        {id: 'imblockible', name: 'Imblockible', description: 'A game where you have to jump over obstacles', tags: ['C++', 'SFML']},
-        {id: 'droidshooter', name: 'DroidShooter', description: 'A shoot\'em\'up for Android', tags: ['Java', 'LibGDX']},
-        {id: 'tictactoe', name: 'Tic Tac Toe', description: 'A TicTacToe game to play with your friends', tags: ['C++', 'SFML']},
-        {id: 'vrvizualizer', name: 'VR Visualizer', description: 'Student project for Virtual Reality', tags: ['C++', 'OpenFrameworks']},
-        {id: 'raytracer', name: 'RayTracer', description: 'Student project for Image Rendering', tags: ['C++', 'OpenGL']},
-        {id: 'mapgenerator', name: 'Map Generator', description: 'Tool for generating 2D biome maps', tags: ['C++', 'SFML']},
-        {id: 'hxiris', name: 'hxIris', description: 'Experiment on Virtual Reality', tags: ['Haxe', 'OpenFrameworks']},
-        {id: 'towerrift', name: 'Tower Rift', description: 'Student project with Kinect and Oculus Rift', tags: ['Unity3D']},
-        {id: 'faceblur', name: 'Faceblur', description: 'Internship project on automatic face blurring', tags: ['C++', 'OpenCV', 'Qt']},
-        {id: 'tuliptwitter', name: 'Twitter Plugin for Tulip', tags: ['C++', 'Qt']},
-        {id: 'asfml', name: 'aSFML', tags: ['C++', 'SFML']},
-        {id: 'automathaxe', name: 'automatHaxe', tags: ['Haxe']},
-        {id: 'croustibash', name: 'Croustibash', tags: ['C++', 'SFML']},
-        {id: 'gameoflife', name: 'Game of Life', tags: ['C++', 'SFML']},
-        {id: 'treegenerator', name: 'Tree Generator', tags: ['C++', 'SFML']},
-        {id: 'flat226', name: 'Flat226', description: 'Association Bordelaise de création de jeux vidéo', tags: ['HTML', 'CSS', 'Haxe']},
-        {id: 'labeli', name: 'Label[i]', description: 'Asso étudiante Informatique de l\'Univ. de Bdx', tags: ['HTML', 'CSS', 'Haxe']},
-        {id: 'farore', name: 'Farore', description: 'Framework PHP/JS featuring native AJAX loading', tags: ['PHP', 'Javascript']}
-      ],
-      displayedProjects: []
+        {id: 'hardcorefarmers', name: 'Hardcore Farmers', description: 'Global Game Jam 2016',
+        tags: ['Unity3D'], sources: 'http://google.fr'},
+        {id: 'thedryingseed', name: 'The Drying Seeds', description: 'Game Jam Bordeaux #3',
+        tags: ['Unity3D'], sources: 'http://google.fr'},
+        {id: 'quantumarcana', name: 'Quantum Arcana', description: 'A video game playable at the Musée d\'Aquitaine in Bordeaux',
+        tags: ['Unity3D'], sources: 'http://google.fr'},
+        {id: 'cerberus', name: 'Cerberus', description: 'Ludum Dare #33',
+        tags: ['Unity3D'], sources: 'http://google.fr'},
+        {id: 'tkbv', name: 'The Knight of the Buffet à Vaisselle', description: 'Global Game Jam 2015',
+        tags: ['Unity3D'], sources: 'http://google.fr'},
+        {id: 'remoteisland', name: 'Remote Island', description: 'Ludum Dare #31, "Entire Game on One Screen"',
+        tags: ['Haxe', 'OpenFL'], sources: 'http://google.fr'},
+        {id: 'absolutezero', name: 'Absolute Zero', description: 'Game Jam Bordeaux #2, Theme : Shiver',
+        tags: ['Unity3D'], sources: 'http://google.fr'},
+        {id: 'taleofalostsoul', name: 'Tale of a Lost Soul', description: 'Ludum Dare #27, Theme : 10 Secondes',
+        tags: ['Haxe', 'OpenFL'], sources: 'http://google.fr'},
+        {id: 'rhythmpropaganda', name: 'RhythmPropaGanda', description: 'Game Jam Bordeaux, Theme : Rhythm',
+        tags: ['Haxe', 'OpenGL'], sources: 'http://google.fr'},
+        {id: 'rool', name: 'Rool', description: 'Created with the Flat226 team',
+        tags: ['Unity3D'], sources: 'http://google.fr'},
+        {id: 'shards', name: 'Shards', description: 'Ludum Dare #30, Theme : Connected Worlds',
+        tags: ['Haxe', 'Heaps'], sources: 'http://google.fr'},
+        {id: 'ihatecircles', name: 'I Hate Circles', description: 'Created with the Flat226 team',
+        tags: ['Haxe', 'Haxor'], sources: 'http://google.fr'},
+        {id: 'imblockible', name: 'Imblockible', description: 'A game where you have to jump over obstacles',
+        tags: ['C++', 'SFML'], sources: 'http://google.fr'},
+        {id: 'droidshooter', name: 'DroidShooter', description: 'A shoot\'em\'up for Android',
+        tags: ['Java', 'LibGDX'], sources: 'http://google.fr'},
+        {id: 'tictactoe', name: 'Tic Tac Toe', description: 'A TicTacToe game to play with your friends',
+        tags: ['C++', 'SFML'], sources: 'http://google.fr'},
+        {id: 'vrvizualizer', name: 'VR Visualizer', description: 'Student project for Virtual Reality',
+        tags: ['C++', 'OpenFrameworks'], sources: 'http://google.fr'},
+        {id: 'raytracer', name: 'RayTracer', description: 'Student project for Image Rendering',
+        tags: ['C++', 'OpenGL'], sources: 'http://google.fr'},
+        {id: 'mapgenerator', name: 'Map Generator', description: 'Tool for generating 2D biome maps',
+        tags: ['C++', 'SFML'], sources: 'http://google.fr'},
+        {id: 'hxiris', name: 'hxIris', description: 'Experiment on Virtual Reality',
+        tags: ['Haxe', 'OpenFrameworks'], sources: 'http://google.fr'},
+        {id: 'towerrift', name: 'Tower Rift', description: 'Student project with Kinect and Oculus Rift',
+        tags: ['Unity3D'], sources: 'http://google.fr'},
+        {id: 'faceblur', name: 'Faceblur', description: 'Internship project on automatic face blurring',
+        tags: ['C++', 'OpenCV', 'Qt'], sources: 'http://google.fr'},
+        {id: 'tuliptwitter', name: 'Twitter Plugin for Tulip',
+        tags: ['C++', 'Qt'], sources: 'http://google.fr'},
+        {id: 'asfml', name: 'aSFML',
+        tags: ['C++', 'SFML'], sources: 'http://google.fr'},
+        {id: 'automathaxe', name: 'automatHaxe',
+        tags: ['Haxe'], sources: 'http://google.fr'},
+        {id: 'croustibash', name: 'Croustibash',
+        tags: ['C++', 'SFML'], sources: 'http://google.fr'},
+        {id: 'gameoflife', name: 'Game of Life',
+        tags: ['C++', 'SFML'], sources: 'http://google.fr'},
+        {id: 'treegenerator', name: 'Tree Generator',
+        tags: ['C++', 'SFML'], sources: 'http://google.fr'},
+        {id: 'flat226', name: 'Flat226', description: 'Association Bordelaise de création de jeux vidéo',
+        tags: ['HTML', 'CSS', 'Haxe'], sources: 'http://google.fr'},
+        {id: 'labeli', name: 'Label[i]', description: 'Asso étudiante Informatique de l\'Univ. de Bdx',
+        tags: ['HTML', 'CSS', 'Haxe'], sources: 'http://google.fr'},
+        {id: 'farore', name: 'Farore', description: 'Framework PHP/JS featuring native AJAX loading',
+        tags: ['PHP', 'Javascript'], sources: 'http://google.fr'}
+      ]
     }
-  },
-  created: function () {
-    displayedProjects = projects;
-    console.log(displayedProjects);
   }
 }
 </script>
@@ -134,9 +159,9 @@ h2 {
 	display : flex;
 	flex-wrap: wrap;
 }
-#searchFilter {
+/*#searchFilter {
   width : 100%;
   font-size: 2em;
   margin: 10px;
-}
+}*/
 </style>

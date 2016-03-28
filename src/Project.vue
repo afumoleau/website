@@ -1,12 +1,20 @@
 <template>
-  <project>
-    <div style="background-image : url('../images/{{project.id}}.png'); background-size: cover; background-position: center center;">
+  <project class="card-panel">
+    <div class="background" style="background-image : url('static/images/{{project.id}}.png');">
       <div id="tags">
-        <div class="tag {{tag}}" v-for="tag in project.tags"><div>{{tag}}</div></div>
+        <div class="chip {{tag}}" v-for="tag in project.tags"><div>{{tag}}</div></div>
       </div>
+      <br>
       <div id="info">
-        <h3>{{project.name}}</h3>
-        <div id="description">{{project.description}}</div>
+        <div class="header">
+          <h3>{{project.name}}</h3>
+          <div id="description">{{project.description}}</div>
+        </div>
+        <div class="links">
+          <a class="waves-effect waves-light btn-large blue" v-if="project.download" href="{{project.download}}" target="_blank"><i class="material-icons left">file_download</i>Download</a>
+          <a class="waves-effect waves-light btn-large blue" v-if="project.play" href="{{project.play}}" target="_blank"><i class="material-icons left">videogame_asset</i>Play</a>
+          <a class="waves-effect waves-light btn-large blue" v-if="project.sources" href="{{project.sources}}" target="_blank"><i class="material-icons left">code</i>Sources</a>
+        </div>
       </div>
       <!-- <core-overlay backdrop id="overlay" closeSelector="#close-overlay">
         <core-icon icon="close" id="close-overlay"></core-icon>
@@ -34,7 +42,8 @@ export default {
 project
 {
   display : block;
-  background-color : #FFF;
+  padding: 0;
+  /*background-color : #FFF;
   border-radius : 5px;
   overflow : hidden;
   border : 1px solid white;
@@ -43,26 +52,45 @@ project
   cursor: pointer;
   flex-grow : 1;
   flex-shrink : 0;
-  flex-basis : 350px;
+  flex-basis : 350px;*/
+  .chip {
+    margin : 0px 3px;
+  }
+}
+.background {
+  background-size: cover;
+  background-position: center center;
 }
 #info
 {
   margin-top : 40px;
-  padding : 10px 25px;
+  padding : 10px 10px 10px 25px;
   color : white;
-  background-color : rgba(0,0,0,0.5);
+  display : flex;
+  align-items: flex-end;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%);
+
+
+    .header {
+      flex-grow : 1;
+      flex-shrink : 1;
+    }
+    .links {
+      flex-grow : 0;
+      flex-shrink : 0;
+    }
 }
 h3
 {
   margin : 0px;
   text-shadow : 0px 1px 3px #000;
-  font-size : 1.5em;
+  font-size : 2.5em;
 }
 #description
 {
-  font-size : 0.9em;
-  opacity : 0.8;
-  text-shadow : 0px 1px 0px #000;
+  color : #ddd;
+  text-shadow : 0px 1px 0px rgba(0,0,0,0.5);
+  font-size : 1.2em;
 }
 #tags
 {
@@ -95,23 +123,22 @@ h3
 {
   background-color : #CCC;
   color : black;
-  font-size : 0.8em;
   padding : 2px 5px;
   margin : 0px 5px;
-  transform:skewX(-20deg);
+  /*transform:skewX(-20deg);
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.33);
   div {
     transform:skewX(20deg);
-  }
+  }*/
 }
-.tag
-.tag.haxe { background-color : orange;}
-.tag.openfl { background-color : teal;}
-.tag.javascript { background-color : #60B000;}
-.tag.unity3d { background-color : #455463;}
-.tag.cpp { background-color : #0080FF;}
+.tag.Haxe { background-color : orange;}
+.tag.OpenFL { background-color : teal;}
+.tag.Javascript { background-color : #60B000;}
+.tag.Unity3D { background-color : #455463;}
+.tag.CPP { background-color : #0080FF;}
 .tag.csharp { background-color : #FF4020;}
-.tag.haxor { background-color : #AAA;}
-.tag.heaps { background-color : white;}
+.tag.Haxor { background-color : #AAA;}
+.tag.Heaps { background-color : white;}
 
 core-overlay
 {
