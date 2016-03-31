@@ -16,4 +16,4 @@ addons:
 script:
 - npm run build
 after_success:
-- npm run deploy
+- gulp deploy --user $FTP_USER --password $FTP_PASSWORD
