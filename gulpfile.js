@@ -4,6 +4,9 @@ var gutil = require('gulp-util');
 var minimist = require('minimist');
 var args = minimist(process.argv.slice(2));
 
+console.log(args.user);
+console.log(args.password.length);
+
 gulp.task('deploy', function() {
   var remotePath = '/dist/';
   var conn = ftp.create({
