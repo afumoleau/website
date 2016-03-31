@@ -1,17 +1,19 @@
 language: node_js
 node_js:
-  - "5.8"
+- '5.8'
 env:
+  matrix:
   - CXX=g++-4.8
+  global:
+  - secure: EDekB6DVUWsH2F82KeQjrm/SBdkGlGYa4Lbok0LHP1I0emUhKL+5nB3sxUKA/2a5XB+2LxWKECoow3p6tR1xDuczLAwUu5kjeF/zVIlGfF9DufZmIxZ/xKSOZmIkncAL+SgGpC7ldSK5HUISXNWQVdKK5B357QAjGvd+KmlgR00=
+  - secure: oR8od+V489Do5SAqUn7XDH4qdTLG1yZkfqh2sslEjYzkxoVLlArip8xCtUSPUMU6njxJ9wgIPFU6zJeMab7AJkNgBIVHATznz5TWWUypbPzaWRVtcGhvC/pCaNQG/SlJBXaP6JLZpDTJnI1FF09oyus55sOzTa6BgHxc2t6xbTg=
 addons:
   apt:
     sources:
-      - ubuntu-toolchain-r-test
+    - ubuntu-toolchain-r-test
     packages:
-      - g++-4.8
-
-script :
-  - npm run build
-
+    - g++-4.8
+script:
+- npm run build
 after_success:
-  - npm run deploy
+- npm run deploy
