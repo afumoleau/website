@@ -13,6 +13,7 @@
         <div class="links">
           <a class="waves-effect waves-light btn-large blue" v-if="project.download" href="{{project.download}}" target="_blank"><i class="material-icons left">file_download</i>Download</a>
           <a class="waves-effect waves-light btn-large blue" v-if="project.play" href="{{project.play}}" target="_blank"><i class="material-icons left">videogame_asset</i>Play</a>
+          <a class="waves-effect waves-light btn-large blue disabled" v-if="project.playDisabled" target="_blank"><i class="material-icons left">videogame_asset</i>Play</a>
           <a class="waves-effect waves-light btn-large blue" v-if="project.sources" href="{{project.sources}}" target="_blank"><i class="material-icons left">code</i>Sources</a>
         </div>
       </div>
