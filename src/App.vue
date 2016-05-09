@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="container">
+  <div id="app" class="container" style="max-width:900px;">
     <header layout horizontal>
         <img src="assets/picture.png" alt="">
         <div class="info" layout vertical>
@@ -41,6 +41,8 @@ export default {
     return {
       searchFilter: '',
       projects: [
+        {id: 'shapewings', name: 'Shapewings', description: 'Ludum Dare #35',
+        tags: ['Haxe', 'Heaps'], play: 'http://www.eolhing.me/games/shapewings', sources: 'https://github.com/eolhing/shapewings'},
         {id: 'hardcorefarmers', name: 'Hardcore Farmers', description: 'Global Game Jam 2016',
         tags: ['Unity3D'], play: 'http://www.eolhing.me/games/hardcorefarmers', sources: 'https://github.com/eolhing/hardcore-farmers'},
         {id: 'thedryingseeds', name: 'The Drying Seeds', description: 'Game Jam Bordeaux #3',
@@ -49,6 +51,8 @@ export default {
         tags: ['Unity3D'], download: 'https://play.google.com/store/apps/details?id=com.flat226.quantumarcana&hl=en', sources: 'https://github.com/eolhing/quantumarcana'},
         {id: 'cerberus', name: 'Cerberus', description: 'Ludum Dare #33',
         tags: ['Unity3D'], play: 'http://www.eolhing.me/games/cerberus', sources: 'https://github.com/eolhing/cerberus'},
+        {id: 'chirignons', name: 'La Légende des Chirignons', description: 'Pixel Challenge 2015',
+        tags: ['Unity3D'], download: 'http://www.eolhing.me/games/chirignons.zip', sources: 'https://github.com/eolhing/waq15'},
         {id: 'tkbv', name: 'The Knight of the Buffet à Vaisselle', description: 'Global Game Jam 2015',
         tags: ['Unity3D'], play: 'http://www.eolhing.me/games/tkbv', sources: 'https://github.com/eolhing/tkbv'},
         {id: 'remoteisland', name: 'Remote Island', description: 'Ludum Dare #31, "Entire Game on One Screen"',
